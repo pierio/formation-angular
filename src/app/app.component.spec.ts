@@ -1,5 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { LoginModule } from './login/login.module';
+import { UiModule } from './ui/ui.module';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -7,6 +9,10 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports: [
+        LoginModule,
+        UiModule
+      ]
     }).compileComponents();
   }));
 
