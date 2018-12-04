@@ -1,0 +1,9 @@
+<tr>
+    <td>{{ prestation.typePresta }}</td>
+    <td>{{ prestation.client }}</td>
+    <td>{{ prestation.nbJours }}</td>
+    <td>{{ prestation.tjmHt | currency: 'EUR' }}</td>
+    <td>{{ prestation.totalHt() | currency: 'EUR' }}</td>
+    <td>{{ prestation.totalTTC() | currency: 'EUR' }}</td>
+    <td>{{ prestation.state }}</td>
+  </tr>
