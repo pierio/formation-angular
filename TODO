@@ -1,0 +1,8 @@
+
+Todo:
+  ☐ créer ClientRoutingModule @started(18-12-04 11:32)
+  ☐ ajouter une route pour instancier PageClientComponent
+  ☐ créer PageNotFoundModule
+  ☐ ajouter une route pour instancier PageNoutFoundComponent
+  ☐ créer LoginRoutingModule
+  ☐ déplacer la route /login
