@@ -21,3 +21,8 @@
 tbody > * {
   display: contents;
 }
+
+app-page-prestations thead {
+  background-color: $dark-color;
+  color: $light-color;
+}
