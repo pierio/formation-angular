@@ -5,7 +5,7 @@
   <td>{{ prestation.tjmHt | currency: 'EUR' }}</td>
   <td>{{ prestation | total | currency: 'EUR' }}</td>
   <td>{{ prestation | total: prestation.tauxTva | currency: 'EUR' }}</td>
-  <td>
+  <td [appState]="prestation.state">
     <select [value]="prestation.state" (change)="changeState($event)" >
       <option *ngFor="let state of states" [value]="state">{{ state }}</option>
       <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key">{{ state.value }}</option> -->

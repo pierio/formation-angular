@@ -1,12 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
 import { TableauComponent } from './tableau/tableau.component';
-import { StateDirective } from './directives/state.directive';
 
 @NgModule({
   declarations: [TotalPipe, TableauComponent, StateDirective],
-  exports: [TotalPipe, TableauComponent],
+  exports: [TotalPipe, TableauComponent, StateDirective],
   imports: [
     CommonModule
   ]

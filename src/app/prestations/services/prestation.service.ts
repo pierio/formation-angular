@@ -24,6 +24,5 @@ export class PrestationService {
 
   public update(prestation: Prestation, state: State) {
     prestation.state = state;
-    console.log(prestation.state);
   }
 }
