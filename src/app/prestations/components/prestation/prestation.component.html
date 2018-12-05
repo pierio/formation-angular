@@ -1,9 +1,14 @@
 <tr>
-    <td>{{ prestation.typePresta }}</td>
-    <td>{{ prestation.client }}</td>
-    <td>{{ prestation.nbJours }}</td>
-    <td>{{ prestation.tjmHt | currency: 'EUR' }}</td>
-    <td>{{ prestation.totalHt() | currency: 'EUR' }}</td>
-    <td>{{ prestation.totalTTC() | currency: 'EUR' }}</td>
-    <td>{{ prestation.state }}</td>
-  </tr>
+  <td>{{ prestation.typePresta }}</td>
+  <td>{{ prestation.client }}</td>
+  <td>{{ prestation.nbJours }}</td>
+  <td>{{ prestation.tjmHt | currency: 'EUR' }}</td>
+  <td>{{ prestation | total | currency: 'EUR' }}</td>
+  <td>{{ prestation | total: prestation.tauxTva | currency: 'EUR' }}</td>
+  <td>
+    <select [value]="prestation.state" (change)="changeState($event)" >
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key">{{ state.value }}</option> -->
+    </select>
+  </td>
+</tr>

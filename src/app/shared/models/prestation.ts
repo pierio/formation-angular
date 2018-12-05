@@ -8,7 +8,7 @@ export class Prestation implements PrestationI {
   nbJours = 0;
   tjmHt = 0;
   tauxTva = 20;
-  state = State.OPTIONS;
+  state = State.CONFIRME;
 
   constructor(fields?: Partial<Prestation>) {
     if (fields) {

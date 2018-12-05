@@ -1,5 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { State } from 'src/app/shared/enums/state.enum';
 import { Prestation } from 'src/app/shared/models/prestation';
+import { PrestationService } from '../../services/prestation.service';
 
 @Component({
   selector: 'app-prestation',
@@ -8,9 +10,16 @@ import { Prestation } from 'src/app/shared/models/prestation';
 })
 export class PrestationComponent implements OnInit {
   @Input() prestation: Prestation;
-  constructor() { }
+  public states = Object.values(State);
+  constructor(
+    private ps: PrestationService
+  ) { }
 
   ngOnInit() {
   }
 
+  changeState(event) {
+    const state = event.target.value;
+    this.ps.update(this.prestation, state);
+  }
 }

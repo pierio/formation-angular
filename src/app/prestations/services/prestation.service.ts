@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Prestation } from 'src/app/shared/models/prestation';
 import { fakePrestations } from './fake-prestation';
+import { State } from 'src/app/shared/enums/state.enum';
+import { isNgTemplate } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +20,10 @@ export class PrestationService {
 
   public set collection(col: Prestation[]) {
     this._collection = col;
+  }
+
+  public update(prestation: Prestation, state: State) {
+    prestation.state = state;
+    console.log(prestation.state);
   }
 }
