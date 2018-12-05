@@ -14,5 +14,12 @@ export const fakeClients: Client[] = [
       name: 'Jean Dupont',
       email: 'jean.dupont@capgemini.com'
     }
+  ),
+  new Client(
+    {
+      id: '3',
+      name: 'Test Test',
+      email: 'test.test@capgemini.com'
+    }
   )
 ];
