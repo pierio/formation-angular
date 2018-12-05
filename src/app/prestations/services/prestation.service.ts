@@ -21,6 +21,10 @@ export class PrestationService {
     this._collection = col;
   }
 
+  public addPrestation(prest: Prestation) {
+     this.collection.push(prest);
+  }
+
   public update(prestation: Prestation, state: State) {
     prestation.state = state;
   }
