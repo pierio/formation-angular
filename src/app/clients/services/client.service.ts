@@ -21,6 +21,10 @@ export class ClientService {
     this._collection = col;
   }
 
+  public addClient(cli: Client): void {
+    this.collection.push(new Client(cli));
+  }
+
   public update(client: Client, state: Stateclient) {
     client.state = state;
   }
