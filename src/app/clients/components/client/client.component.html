@@ -1,0 +1,9 @@
+<tr>
+  <td>{{ client.name }}</td>
+  <td>{{ client.email }}</td>
+  <td [appState]="client.state">
+    <select [value]="client.state" (change)="changeState($event)" >
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+    </select>
+  </td>
+</tr>

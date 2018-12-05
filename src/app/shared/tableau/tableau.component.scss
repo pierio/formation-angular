@@ -1,6 +1,7 @@
 @import '~src/variables';
 
-#tab .state-annule {
+#tab .state-annule,
+#tab .state-inactif {
   background: $palette-color-two;
 }
 
@@ -8,7 +9,8 @@
   background: $palette-color-three;
 }
 
-#tab .state-confirme {
+#tab .state-confirme,
+#tab .state-actif {
   background: $palette-color-four;
 }
 
