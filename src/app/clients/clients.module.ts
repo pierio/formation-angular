@@ -8,9 +8,10 @@ import { FormReactiveClientComponent } from './components/form-reactive-client/f
 import { AddClientComponent } from './containers/add-client/add-client.component';
 import { ListClientsComponent } from './containers/list-clients/list-clients.component';
 import { PageClientsComponent } from './pages/page-clients/page-clients.component';
+import { PageAddClientComponent } from './pages/page-add-client/page-add-client.component';
 
 @NgModule({
-  declarations: [PageClientsComponent, ClientComponent, ListClientsComponent, AddClientComponent, FormReactiveClientComponent],
+  declarations: [PageClientsComponent, ClientComponent, ListClientsComponent, AddClientComponent, FormReactiveClientComponent, PageAddClientComponent],
   imports: [
     CommonModule,
     ClientsRoutingModule,
