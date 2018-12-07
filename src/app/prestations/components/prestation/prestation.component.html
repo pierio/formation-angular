@@ -11,6 +11,6 @@
       <!-- <option *ngFor="let state of states | keyvalue" [value]="state.key">{{ state.value }}</option> -->
     </select>
   </td>
-  <td (click)="$event.stopPropagation();delete(prestation)"><fa-icon [icon]="faTrashAlt"></fa-icon></td>
-  <td><fa-icon [icon]="faEdit"></fa-icon></td>
+  <td (click)="$event.stopPropagation();delete()"><fa-icon [icon]="faTrashAlt"></fa-icon></td>
+  <td [routerLink]="['edit', prestation.id]" routerLinkActive="active"><fa-icon [icon]="faEdit"></fa-icon></td>
 </tr>
