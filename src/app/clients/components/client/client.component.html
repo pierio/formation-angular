@@ -6,4 +6,6 @@
       <option *ngFor="let state of states" [value]="state">{{ state }}</option>
     </select>
   </td>
+  <td (click)="delete(client)"><fa-icon [icon]="faTrashAlt"></fa-icon></td>
+  <td><fa-icon [icon]="faEdit"></fa-icon></td>
 </tr>

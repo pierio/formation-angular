@@ -4,7 +4,7 @@
 
 <main [ngClass]="{'close-aside': header.open === false}">
 
-  <div class="shadow position-fixed">
+  <div class="shadow position-fixed" (click)="header.open = false">
   </div>
 
   <aside>

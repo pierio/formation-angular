@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Client } from 'src/app/shared/models/client';
 import { ClientService } from '../../services/client.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-clients',
@@ -8,7 +9,8 @@ import { ClientService } from '../../services/client.service';
   styleUrls: ['./list-clients.component.scss']
 })
 export class ListClientsComponent implements OnInit {
-  public clients: Client[];
+  // public clients: Client[];
+  public clients$: Observable<Client[]>;
   public headers: string[];
 
   constructor(
@@ -16,8 +18,7 @@ export class ListClientsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.clients = this.cs.collection;
-    this.headers = ['Nom', 'Email', 'Statut'];
+    this.clients$ = this.cs.collection$;
+    this.headers = ['Nom', 'Email', 'Statut', 'Supprimer', 'Modifier'];
   }
-
 }

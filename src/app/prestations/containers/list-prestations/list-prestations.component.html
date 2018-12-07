@@ -1,4 +1,4 @@
 <app-tableau [headers]="headers">
-    <app-prestation *ngFor="let prest of prestations" [prestation]="prest"></app-prestation>
+    <app-prestation *ngFor="let prest of prestations$ | async" [prestation]="prest"></app-prestation>
 </app-tableau>
 <app-add-row label="une prestation"></app-add-row>

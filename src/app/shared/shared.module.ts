@@ -7,10 +7,11 @@ import { StateDirective } from './directives/state.directive';
 import { TotalPipe } from './pipes/total.pipe';
 import { TableauComponent } from './tableau/tableau.component';
 import { TemplatesModule } from '../templates/templates.module';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @NgModule({
-  declarations: [TotalPipe, TableauComponent, StateDirective, AddRowComponent],
-  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, TemplatesModule],
+  declarations: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, NavBarComponent],
+  exports: [TotalPipe, TableauComponent, StateDirective, AddRowComponent, TemplatesModule, FontAwesomeModule, NavBarComponent],
   imports: [
     CommonModule,
     FontAwesomeModule,

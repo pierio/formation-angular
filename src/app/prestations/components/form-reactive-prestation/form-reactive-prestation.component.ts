@@ -34,6 +34,7 @@ export class FormReactivePrestationComponent implements OnInit {
       nbJours : [this.init.nbJours],
       tjmHt : [this.init.tjmHt],
       tauxTva : [this.init.tauxTva],
+      comment: [this.init.comment],
       state : [this.init.state]
     });
   }

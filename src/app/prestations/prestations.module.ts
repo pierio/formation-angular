@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbAccordionModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from '../shared/shared.module';
+import { CommentPrestationComponent } from './components/comment-prestation/comment-prestation.component';
+import { DetailPrestationComponent } from './components/detail-prestation/detail-prestation.component';
 import { FormPrestationComponent } from './components/form-prestation/form-prestation.component';
 import { FormReactivePrestationComponent } from './components/form-reactive-prestation/form-reactive-prestation.component';
 import { PrestationComponent } from './components/prestation/prestation.component';
@@ -13,13 +16,14 @@ import { PrestationsRoutingModule } from './prestations-routing.module';
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent, PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, FormReactivePrestationComponent],
+  declarations: [PagePrestationsComponent, ListPrestationsComponent, PrestationComponent, PageAddPrestationComponent, AddPrestationComponent, FormPrestationComponent, FormReactivePrestationComponent, DetailPrestationComponent, CommentPrestationComponent],
   imports: [
     CommonModule,
     PrestationsRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbAccordionModule
   ]
 })
 export class PrestationsModule { }

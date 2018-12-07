@@ -20,8 +20,12 @@ export class AddPrestationComponent implements OnInit {
   }
 
   public add(item: Prestation) {
-    this.ps.addPrestation(item);
-    this.router.navigate(['../'], {relativeTo: this.ar});
+    this.ps.add(item).then((data) => {
+      this.router.navigate(['../'], {relativeTo: this.ar});
+    });
+    // this.ps.add(item).subscribe((data) => {
+    //   this.router.navigate(['../'], {relativeTo: this.ar});
+    // });
   }
 
 }

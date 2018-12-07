@@ -20,7 +20,7 @@ export class AddClientComponent implements OnInit {
   }
 
   public add(item: Client) {
-    this.cs.addClient(item);
+    this.cs.add(item);
     this.router.navigate(['../', {relativeTo: this.ar}]);
   }
 
